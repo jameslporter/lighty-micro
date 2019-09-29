@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu
 
 EXPOSE 22 80
 
@@ -6,7 +6,7 @@ RUN apt-get update
 
 RUN apt-get install lighttpd lighttpd-mod-magnet -y
 
-RUN apt-get install php5-cgi php5-gd php5-mysql php5-curl -y
+RUN apt-get install php-cgi php-gd php-mysql php-curl -y
 
 COPY lighttpd /etc/lighttpd/
 
